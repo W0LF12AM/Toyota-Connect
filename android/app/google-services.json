@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797834892606",
+    "project_id": "dbmagang-ec5dc",
+    "storage_bucket": "dbmagang-ec5dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797834892606:android:64061cffd2355d52fdc86f",
+        "android_client_info": {
+          "package_name": "com.example.mk_tutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX_HjFwXDwt3yW8oiyvVySPJeRJVO1Zaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
