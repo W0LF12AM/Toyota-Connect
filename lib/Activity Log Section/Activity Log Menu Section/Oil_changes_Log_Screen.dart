@@ -76,6 +76,7 @@ class Oil_changes_Log_Screen extends StatelessWidget {
                                       return Column(
                                         children: [
                                           My_OCcard(
+                                            documentID: document.id,
                                             Nama_pelanggan:
                                                 data['Nama Pelanggan'],
                                             Tanggal: data['Tanggal'],

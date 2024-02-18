@@ -8,10 +8,18 @@ import 'package:mk_tutorial/style%20&%20widget/my_widget/my_log_widget/my_card.d
 import 'package:mk_tutorial/style%20&%20widget/my_widget/my_log_appbar_menu.dart';
 import 'package:mk_tutorial/style%20&%20widget/my_widget/my_log_background_card.dart';
 
-class Machine_check_up_Log_Screen extends StatelessWidget {
+class Machine_check_up_Log_Screen extends StatefulWidget {
   Machine_check_up_Log_Screen({super.key});
 
+  @override
+  State<Machine_check_up_Log_Screen> createState() =>
+      _Machine_check_up_Log_ScreenState();
+}
+
+class _Machine_check_up_Log_ScreenState
+    extends State<Machine_check_up_Log_Screen> {
   final User? currentUser = FirebaseAuth.instance.currentUser;
+  late List<DocumentSnapshot> documents = [];
 
   @override
   Widget build(BuildContext context) {
@@ -77,17 +85,19 @@ class Machine_check_up_Log_Screen extends StatelessWidget {
 
                                       return Column(
                                         children: [
-                                          My_Card(
-                                            Nama_pelanggan:
-                                                data['Nama Pelanggan'],
-                                            Tanggal: data['Tanggal'],
-                                            Plat_nomor: data['Plat Nomor'],
-                                            Model: data['Model'],
-                                            Username: userData['username'],
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                                bottom: 10, top: 10),
+                                            child: My_Card(
+                                              documentID: document.id,
+                                              Nama_pelanggan:
+                                                  data['Nama Pelanggan'],
+                                              Tanggal: data['Tanggal'],
+                                              Plat_nomor: data['Plat Nomor'],
+                                              Model: data['Model'],
+                                              Username: userData['username'],
+                                            ),
                                           ),
-                                          SizedBox(
-                                            height: 10,
-                                          )
                                         ],
                                       );
                                     }

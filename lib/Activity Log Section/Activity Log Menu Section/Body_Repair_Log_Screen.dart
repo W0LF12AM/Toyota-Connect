@@ -76,6 +76,7 @@ class Body_repairment_log_screen extends StatelessWidget {
                                       return Column(
                                         children: [
                                           My_BRcard(
+                                            documentID: document.id,
                                             Nama_pelanggan:
                                                 data['Nama Pelanggan'],
                                             Tanggal: data['Tanggal'],
